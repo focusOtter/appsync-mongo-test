@@ -1,0 +1,38 @@
+type Schema {
+	query: Query
+	mutation: Mutation
+}
+
+type Query {
+	getProduct(id: ID!): Product @aws_api_key
+}
+
+type Mutation {
+	addProduct(input: ProductInput): Product @aws_api_key
+}
+
+type Product {
+	id: ID!
+	name: String!
+	region: REGION_ENUM!
+	sector: String!
+	industry: String!
+	riskType: String!
+	owner: String!
+	createdAt: AWSDateTime
+	updatedAt: AWSDateTime
+}
+
+input ProductInput {
+	name: String!
+	region: REGION_ENUM!
+	sector: String!
+	industry: String!
+	riskType: String!
+}
+
+enum REGION_ENUM {
+	US
+	CA
+	MX
+}

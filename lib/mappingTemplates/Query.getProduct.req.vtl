@@ -1,0 +1,21 @@
+#set($secret = $util.parseJson($ctx.prev.result).key)
+
+{
+  "method": "POST",
+  "version": "2018-05-29",
+  "resourcePath": "/app/data-upuof/endpoint/data/v1/action/findOne",
+  "params": {
+    "headers": {
+      "api-key": "$secret",
+      "Content-Type": "application/json",
+      "Access-Control-Request-Headers": "*",
+      "Accept": "application/json"
+    },
+    "body": {
+      "dataSource": "AppSyncMongoTest",
+      "database": "RiskAssessment",
+      "collection": "Products",
+      "filter": {"_id": { "$oid": "$ctx.stash.id" }}
+    }
+  }
+}
