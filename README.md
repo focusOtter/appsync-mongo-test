@@ -65,7 +65,7 @@ A pipeline resolver consists of the following:
 
 1. **`before`**: This is great to [stash variables](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/mappingTemplates/Pipeline.Before.req.vtl) for later use and general configuration. Variables `stash`ed here are made available to all subsequent functions.
 
-2. **`functions`**: The buisiness logic goes here. This consists of one or many steps that include data manipulation and data gathering. We'll make use of an [HTTP resolver to get data](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/mappingTemplates/Query.getMongoSecret.req.vtl).
+2. **`functions`**: The buisiness logic goes here. This consists of one or many steps that include data manipulation and data gathering. We'll make use of an [HTTP datasource to get data](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/mappingTemplates/Query.getMongoSecret.req.vtl).
 
 3. **`after`**: This is a chance to do some final data manipulation before [passing data back to AppSync](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/mappingTemplates/Pipeline.After.res.vtl)
 
