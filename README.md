@@ -89,3 +89,4 @@ In addition, HTTP DataSources can only perform allowed actions to AWS services b
 - `npm install` install the applications dependencies
 - `npm run build` compile typescript to js
 - `cdk deploy` deploy this stack to your default AWS account/region
+- `cdk destroy` delete the stack and associated resoures
