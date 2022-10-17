@@ -4,7 +4,7 @@
 
 This repo showcases how an AppSync API can use a pipeline resolver to access a MongoDB cluster via an HTTP datasource.
 
-![./repo-images/appsync-mongodb.png](appsync to mongodb architecture diagram)
+![repo-images/appsync-mongodb.png](appsync to mongodb architecture diagram)
 
 Before starting, install the applications dependencies by running the following command from the root of the directory:
 
@@ -15,6 +15,8 @@ npm install
 Afterwards, change the `account` and `region` properties in the [bin file](./bin/appsync-mongo-test.ts) to match the account you wish to deploy to.
 
 ## Database Setup
+
+![repo-images/mongodb-setup.png](mongodb cluster)
 
 1. Create a free [MongoDB Atlas cluster](https://www.mongodb.com/atlas/database)
    - Database Name: `RiskAssessment`
