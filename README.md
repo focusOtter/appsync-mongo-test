@@ -16,7 +16,7 @@ Afterwards, change the `account` and `region` properties in the [bin file](./bin
 
 ## Database Setup
 
-![./repo-images/mongodb-setup.png](mongodb cluster)
+![mongodb cluster](./repo-images/mongodb-setup.png)
 
 1. Create a free [MongoDB Atlas cluster](https://www.mongodb.com/atlas/database)
    - Database Name: `RiskAssessment`
