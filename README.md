@@ -86,7 +86,9 @@ In addition, HTTP DataSources can only perform allowed actions to AWS services b
 
 ## Useful commands
 
+> This project uses nodeJS runtime and NPM. As such, the AWS CDK is not installed globally. Instead, it is prefixed with `npx aws-cdk`.
+
 - `npm install` install the applications dependencies
 - `npm run build` compile typescript to js
-- `cdk deploy` deploy this stack to your default AWS account/region
-- `cdk destroy` delete the stack and associated resoures
+- `npx aws-cdk deploy` deploy this stack to your default AWS account/region
+- `npx aws-cdk destroy` delete the stack and associated resoures
