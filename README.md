@@ -2,9 +2,11 @@
 
 ## Purpose
 
-This repo showcases how to get started
+This repo showcases how an AppSync API can use a pipeline resolver to access a MongoDB cluster via an HTTP datasource.
 
-## Useful commands
+![./repo-images/appsync-mongodb.png](appsync to mongodb architecture diagram)
+
+## Useful CDK commands
 
 - `npm run build` compile typescript to js
 - `npm run watch` watch for changes and compile
