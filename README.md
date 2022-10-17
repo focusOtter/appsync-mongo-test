@@ -45,13 +45,15 @@ After creating an API Key in MongoDB, create a secret in Secrets Manager with th
 }
 ```
 
+Once created, use the ARN of that key to [replace the ARN on this line.](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/appsync-mongo-test-stack.ts#L50)
+
 ## Understanding Our AppSync API
 
 ### Schema
 
 The schema for our AppSync API can be found [here](./lib/schema.graphql).
 
-This uses a public API key to authorize consumers make queries. Essentially, an API customer can call the `getProduct` query given they supply a valid `id`.
+This uses a [public API key to authorize consumers](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/appsync-mongo-test-stack.ts#L15-L18) making queries. Essentially, an API customer can call the `getProduct` query given they supply a valid `id`.
 
 ### Understanding Pipeline Resolvers
 
@@ -59,11 +61,11 @@ Pipeline Resolver: [`BEFORE_STEP`, `FUNCTIONS`, `AFTER_STEP`]
 
 A pipeline resolver consists of the following:
 
-1. **`before`**: This is great to stash variables for later use and general configuration. Variables `stash`ed here are made available to all subsequent functions.
+1. **`before`**: This is great to [stash variables](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/mappingTemplates/Pipeline.Before.req.vtl) for later use and general configuration. Variables `stash`ed here are made available to all subsequent functions.
 
-2. **`functions`**: The buisiness logic goes here. This consists of one or many steps that include data manipulation and data gathering. We'll make use of an HTTP resolver to get data.
+2. **`functions`**: The buisiness logic goes here. This consists of one or many steps that include data manipulation and data gathering. We'll make use of an [HTTP resolver to get data](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/mappingTemplates/Query.getMongoSecret.req.vtl).
 
-3. **`after`**: This is a chance to do some final data manipulation before passing data back to AppSync
+3. **`after`**: This is a chance to do some final data manipulation before [passing data back to AppSync](https://github.com/focusOtter/appsync-mongo-test/blob/main/lib/mappingTemplates/Pipeline.After.res.vtl)
 
 In this project, the flow of data will be:
 
